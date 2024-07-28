@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController restorationIdentifier="Home" storyboardIdentifier="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IWA-Ga-T0A">
+                                <rect key="frame" x="0.0" y="47" width="390" height="748"/>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.84705882349999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IWA-Ga-T0A" secondAttribute="height" multiplier="390:763" constant="7.6671035386631843" id="Bed-c6-b9r"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="remindersCell" rowHeight="85" id="mMs-pv-k34" customClass="RemindersCell" customModule="ToDoList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mMs-pv-k34" id="yyG-dK-4ky">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haj-fM-55L">
+                                                    <rect key="frame" x="8" y="6" width="374" height="73"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kLf-lw-zKW">
+                                                            <rect key="frame" x="10" y="8" width="354" height="57"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX1-Y2-m9v">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="34.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.33725490200000002" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnK-7I-iUd">
+                                                                    <rect key="frame" x="0.0" y="22.333333333333339" width="354" height="34.666666666666657"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.33725490200000002" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="kLf-lw-zKW" secondAttribute="bottom" constant="8" id="65D-GS-ogT"/>
+                                                        <constraint firstItem="kLf-lw-zKW" firstAttribute="top" secondItem="haj-fM-55L" secondAttribute="top" constant="8" id="Rg6-dk-CYH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kLf-lw-zKW" secondAttribute="trailing" constant="10" id="S98-9J-Ch2"/>
+                                                        <constraint firstItem="kLf-lw-zKW" firstAttribute="leading" secondItem="haj-fM-55L" secondAttribute="leading" constant="10" id="xl3-GP-3Rc"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.76862745099999996" green="0.84705882349999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="haj-fM-55L" secondAttribute="bottom" constant="6" id="4zz-7E-QRX"/>
+                                                <constraint firstItem="haj-fM-55L" firstAttribute="top" secondItem="yyG-dK-4ky" secondAttribute="top" constant="6" id="Y9t-8A-YLP"/>
+                                                <constraint firstAttribute="trailing" secondItem="haj-fM-55L" secondAttribute="trailing" constant="8" id="bdL-Od-IGv"/>
+                                                <constraint firstItem="haj-fM-55L" firstAttribute="leading" secondItem="yyG-dK-4ky" secondAttribute="leading" constant="8" id="ek9-lB-0Vm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.76862745099999996" green="0.84705882349999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="remindersDateLabel" destination="jnK-7I-iUd" id="L8F-hR-6Ha"/>
+                                            <outlet property="remindersTitleLabel" destination="PX1-Y2-m9v" id="kqX-xC-3Hw"/>
+                                            <outlet property="remindersView" destination="haj-fM-55L" id="TFh-eS-vtW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfJ-kH-ZZE">
+                                <rect key="frame" x="315" y="740" width="55" height="55"/>
+                                <color key="backgroundColor" red="0.25490196079999999" green="0.79607843140000001" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="VWH-xr-jmh"/>
+                                    <constraint firstAttribute="height" constant="55" id="lix-l1-Clg"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus.app" catalog="system"/>
+                                <connections>
+                                    <action selector="addRemindersPressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqa-5V-yND"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IWA-Ga-T0A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DH7-Gi-OUC"/>
+                            <constraint firstItem="IWA-Ga-T0A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SPV-GC-EHS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kfJ-kH-ZZE" secondAttribute="trailing" constant="20" id="a36-F9-IAl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IWA-Ga-T0A" secondAttribute="trailing" id="cuf-It-RAf"/>
+                            <constraint firstItem="kfJ-kH-ZZE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="315" id="hIa-qz-3BL"/>
+                            <constraint firstItem="IWA-Ga-T0A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v8J-st-H7B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kfJ-kH-ZZE" secondAttribute="bottom" constant="15" id="vKy-Bq-U5r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addRemindersButton" destination="kfJ-kH-ZZE" id="I1q-kK-IjV"/>
+                        <outlet property="remindersTableView" destination="IWA-Ga-T0A" id="6JS-cU-XmK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38.46153846153846" y="-90.284360189573462"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="cmN-yw-69s">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DetailsVC" storyboardName="Details" referencedIdentifier="DetailsVC" id="bBV-c2-Gu1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ceW-2v-qrK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511" y="-90"/>
+        </scene>
+        <!--AddReminders-->
+        <scene sceneID="2Rn-mR-lqu">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AddRemindersID" storyboardName="AddReminders" id="Q2P-02-zG6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UCz-Oa-Abq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="-4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
+    </resources>
+</document>
